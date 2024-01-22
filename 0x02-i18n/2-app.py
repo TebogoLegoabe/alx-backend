@@ -23,10 +23,10 @@ def get_index() -> str:
     """home index"""
     return render_template('1-index.html')
 
+
 @babel.localeselector
 def get_locale() -> str:
-    """Retrieves the locale for a web page.
-    """
+    """Retrieves the locale for a web page"""
     return request.accept_languages.best_match(app.config["LANGUAGES"])
 
 
